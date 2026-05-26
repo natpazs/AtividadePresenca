@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Professor - Anchieta</title>
+
+  <style>
+    /* Reset básico para garantir que fique igual em todos os navegadores */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* O fundo da tela: uma cor sóbria e elegante */
+    body {
+      background-color: #f4f6f9;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* O cartão de login: branco, com sombra suave (dá o toque moderno) */
+    .login-card {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Cabeçalho do formulário */
+    .login-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .login-header h1 {
+      color: #0f172a; /* Azul escuro quase preto */
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .login-header p {
+      color: #64748b; /* Cinza elegante */
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* Grupo de inputs (Label + Campo de texto) */
+    .input-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      font-size: 13px;
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .input-group input {
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #1e293b;
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+
+    /* Efeito quando o usuário clica no campo */
+    .input-group input:focus {
+      border-color: #2563eb; /* Azul corporativo */
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* Botão de login */
+    .btn-login {
+      width: 100%;
+      background-color: #0f172a; /* Cor principal de elite */
+      color: #ffffff;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn-login:hover {
+      background-color: #1e293b; /* Fica um pouco mais claro ao passar o mouse */
+    }
+
+    /* Rodapé do login */
+    .login-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .login-footer a {
+      color: #2563eb;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="login-header">
+      <!-- Você pode colocar a tag <img> aqui depois para a logo da escola -->
+      <h1>FACULDADE ANCHIETA</h1>
+      <p>Sistema de Gestão de Presença</p>
+    </div>
+
+    <form>
+      <div class="input-group">
+        <label for="email">E-mail Institucional</label>
+        <input type="email" id="campo_email" placeholder="professor@instituicao.edu.br" required>
+      </div>
+
+      <div class="input-group">
+        <label for="senha">Senha de Acesso</label>
+        <input type="password" id="campo_senha" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="btn-login">Acessar Painel</button>
+      <p id="mensagem-erro" style="color: red; margin-top: 10px;"></p>
+      <script src="./index.js"></script>
+    </form>
+
+    <div class="login-footer">
+      <a href="#">Esqueci minha credencial</a>
+    </div>
+  </div>
+
+</body>
+</html>
